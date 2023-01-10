@@ -5,12 +5,11 @@
     box-sizing: border-box;
 }
 .container{
-    width: 100%;
-    /* height: 100vh; */
+    
     text-align: center;
-    /* display: flex; */
+    margin: auto;
     text-align: center;
-    justify-content: center;
+    
     
 }
 .first{
@@ -19,7 +18,7 @@
 .pagination{
     display: flex;
     align-items: center;
-    background: wheat;
+    background: whitesmoke;
     color: #383838;
     padding: 8px 30px;
 }
@@ -40,6 +39,12 @@ ul li{
     cursor: pointer;
 
 }
+
+ul li.active{
+    color: #fff;
+    background-image: linear-gradient(black, black);
+    background-repeat: no-repeat;
+}
 .btn1{
     display: inline-flex;
     align-items: center;
@@ -57,7 +62,7 @@ ul li{
 .pagination2{
     display: flex;
     align-items: center;
-    background: wheat;
+    background: whitesmoke;
     color: #383838;
     padding: 8px 30px;
 }
@@ -79,19 +84,6 @@ ul{
 
 }
 
-/* .btn2{
-    display: inline-flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: 500;
-    color: #383838;
-    background: transparent;
-    border-radius: 50%;
-    padding: 8px;
-    border-color: white;
-    cursor: pointer;
-    background: white;
-} */
 .second{
     margin-bottom: 30px;
 }
@@ -100,28 +92,11 @@ ul{
 .pagination3{
     display: flex;
     align-items: center;
-    /* background: wheat; */
     color: #383838;
     padding: 8px 30px;
 }
 ul{
     margin: 20px 30px;
-}
-.num1{
-    display: inline-block;
-    cursor: pointer;
-}
-.num1:hover{
-    width: 45px;
-    height: 45px;
-    /* background: #fff; */
-    margin: 0 10px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 45px;
-    background-color: black;
 }
 
 .btn{

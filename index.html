@@ -21,10 +21,10 @@
             <div class="pagination">
             
                 <ul>
-                    <li class="links" value="1">1</li>
-                    <li class="link" value="2">2</li>
-                    <li class="link" value="3">3</li>
-                    <li class="link" value="4"><i class="fa-solid fa-ellipsis"></i></li>
+                    <li class="link active" value="1" onClick =" activeLink()">1</li>
+                    <li class="link " value="2" >2</li>
+                    <li class="link " value="3" >3</li>
+                    <li class="link " value="4" ><i class="fa-solid fa-ellipsis"></i></li>
                     
                 </ul>
                 <button class="btn1">  <i class="fa-sharp fa-solid fa-angle-right"></i> </button>  
@@ -34,7 +34,7 @@
                 <button class="btn1">  <i class="fa-sharp fa-solid fa-angle-left"></i> </button>
                 <ul>
                     <li class="link" value="1">1</li>
-                    <li class="link" value="2">2</li>
+                    <li class="link active" value="2" onClick =" activeLink()">2</li>
                     <li class="link" value="3">3</li>
                     <li class="link" value="4">4</li>
                     <li class="link" value="4"><i class="fa-solid fa-ellipsis"></i></li>
@@ -48,7 +48,7 @@
             <div class="pagination2">
             
                 <ul>
-                    <li class="link num" value="1">1</li>
+                    <li class="link active num" value="1" onClick =" activeLink()" >1</li>
                     <li class="link num" value="2">2</li>
                     <li class="link num" value="3">3</li>
                     <li class="link num" value="4"><i class="fa-solid fa-ellipsis"></i></li>
@@ -60,8 +60,8 @@
             <div class="pagination2">
                 <button class="btn">  <i class="fa-sharp fa-solid fa-angle-left"></i> </button>
                 <ul>
-                    <li class="link num" value="1">1</li>
-                    <li class="link " value="2">2</li>
+                    <li class="link num bg-light" value="1">1</li>
+                    <li class="link  active" value="2" onClick =" activeLink()" >2</li>
                     <li class="link num" value="3">3</li>
                     <li class="link num" value="4">4</li>
                     <li class="link num" value="4"><i class="fa-solid fa-ellipsis"></i></li>
@@ -76,7 +76,7 @@
             <div class="pagination3">
             
                 <ul>
-                    <li class="link num1" value="1">1</li>
+                    <li class="link active num1" value="1" onClick =" activeLink()" >1</li>
                     <li class="link num1" value="2">2</li>
                     <li class="link num1" value="3">3</li>
                     <li class="link num1" value="1">1</li>
@@ -86,13 +86,15 @@
                 <button class="btn1">  <i class="fa-sharp fa-solid fa-angle-right"></i> </button>  
             </div>
     
-            <div class="pagination2">
+            <div class="pagination3">
                 <button class="btn1">  <i class="fa-sharp fa-solid fa-angle-left"></i> </button>
                 <ul>
-                    <li class="link num" value="1">1</li>
-                    <li class="link" value="2">2</li>
+                    <li class="link  num" value="1">1</li>
+                    <li class="link active" value="2" onClick =" activeLink()" >2</li>
                     <li class="link num" value="3">3</li>
                     <li class="link num" value="4">4</li>
+                    <li class="link num" value="5">1</li>
+
                     <li class="link num" value="4"><i class="fa-solid fa-ellipsis"></i></li>
                     
                 </ul>
@@ -107,7 +109,16 @@
 
 
     <script>
-        let lin
+        let link = document.getElementsByClassName("link");
+        currentValue = 1
+        function activeLink() {
+            for (l of link){
+                l.classList.remove("active");
+
+            }
+            event.target.classList.add("active");
+            currentValue = event.target.value;
+        }
     </script>
 </body>
 </html>
